@@ -1,0 +1,90 @@
+.pokemon-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	position: relative;
+
+	text-transform: capitalize;
+}
+
+.pokemon-details header {
+	font-size: 1.6rem;
+	color: #fff;
+
+	width: 80%;
+
+	text-align: center;
+}
+
+.pokemon-details header img {
+	position: absolute;
+	left: 1rem;
+}
+
+.pokemon-details header .number {
+	position: absolute;
+	right: 1rem;
+}
+
+.pokemon-details .types {
+	list-style: none;
+
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.pokemon-details .types li {
+	color: #fff;
+	font-size: 0.625rem;
+	text-align: center;
+
+	padding: 0.25rem 0.5rem;
+	margin: 0.25rem 0;
+	border-radius: 1rem;
+
+	filter: brightness(1.1);
+}
+
+.pokemon-photo {
+	width: 250px;
+	height: 250px;
+
+	text-align: center;
+
+	z-index: 1;
+}
+
+.info {
+	width: 100%;
+
+	background-color: #fff;
+
+	border-radius: 30px;
+	padding: 3rem 1rem;
+
+	position: absolute;
+	top: 300px;
+}
+
+.info h3 {
+	text-align: center;
+}
+
+table {
+	width: 90%;
+
+	margin: 0 auto;
+
+	text-align: left;
+}
+
+table .key {
+	color: gray;
+
+	width: 40%;
+}
