@@ -60,56 +60,55 @@ function loadPokemon(number) {
 }
 
 function displayPokemon(pokemon) {
-  pokemonPage.classList.add(pokemon.type);
-
   return `
-    <header>
-				<img src="/assets/images/arrow-back.png" alt="arrow-back" width="40" onClick="backPage()" />
-				<span>${pokemon.name}</span>
-        <span class="number">#${pokemon.number}</span>
-				<ol class="types">
-          ${pokemon.types.map(type => `<li class="${type}">${type}</li>`).join("")}
-				</ol>
-			</header>
+    <div class="${pokemon.type} pokemon-details content">
+      <header>
+          <img src="/assets/images/arrow-back.png" alt="arrow-back" width="40" onClick="backPage()" />
+          <span>${pokemon.name}</span>
+          <span class="number">#${pokemon.number}</span>
+          <ol class="types">
+            ${pokemon.types.map(type => `<li class="${type}">${type}</li>`).join("")}
+          </ol>
+        </header>
 
-			<img
-				class="pokemon-photo"
-				src=${pokemon.photo}
-				alt="Bulbasur"
-			/>
+        <img
+          class="pokemon-photo"
+          src=${pokemon.photo}
+          alt="Bulbasur"
+        />
 
-			<section class="info">
-				<table>
-					<tr>
-						<th class="key">Height:</th>
-						<th class="value">${pokemon.height} m</th>
-					</tr>
-					<tr>
-						<th class="key">Weight:</th>
-						<th class="value">${pokemon.weight} kg</th>
-					</tr>
-					<tr>
-						<th class="key">Abilities:</th>
-						<th class="value">${pokemon.abilities.map(ability => ability).join(", ")}</th>
-					</tr>
-				</table>
-
-				<h3>Base Stats</h3>
-        
-				<table>
-          ${pokemon.stats.map(stat => `
+        <section class="info">
+          <table>
             <tr>
-              <th class="key">${stat.name}:</th>
-              <th class="value">${stat.value}</th>
+              <th class="key">Height:</th>
+              <th class="value">${pokemon.height} m</th>
             </tr>
-          `).join("")}
-				</table>
-			</section>
+            <tr>
+              <th class="key">Weight:</th>
+              <th class="value">${pokemon.weight} kg</th>
+            </tr>
+            <tr>
+              <th class="key">Abilities:</th>
+              <th class="value">${pokemon.abilities.map(ability => ability).join(", ")}</th>
+            </tr>
+          </table>
+
+          <h3>Base Stats</h3>
+          
+          <table>
+            ${pokemon.stats.map(stat => `
+              <tr>
+                <th class="key">${stat.name}:</th>
+                <th class="value">${stat.value}</th>
+              </tr>
+            `).join("")}
+          </table>
+        </section>
+      </div>
   `;
 }
 
 function backPage() {
   initialPage.classList.remove('hide');
   pokemonPage.classList.add('hide');
-  pokemonPage.classList.remove('pokemon-details');
 }

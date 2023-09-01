@@ -4,8 +4,10 @@
 	align-items: center;
 
 	position: relative;
+}
 
-	text-transform: capitalize;
+.pokemon-details.hide {
+	display: none;
 }
 
 .pokemon-details header {
@@ -15,6 +17,7 @@
 	width: 80%;
 
 	text-align: center;
+	text-transform: capitalize;
 }
 
 .pokemon-details header img {
@@ -40,7 +43,7 @@
 
 .pokemon-details .types li {
 	color: #fff;
-	font-size: 0.625rem;
+	font-size: 0.825rem;
 	text-align: center;
 
 	padding: 0.25rem 0.5rem;
@@ -85,6 +88,7 @@ table {
 
 table .key {
 	color: gray;
+	text-transform: capitalize;
 
-	width: 40%;
+	width: 50%;
 }
